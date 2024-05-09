@@ -7,7 +7,7 @@ import { AnimationMixer } from 'three';
 
 let mixer = true; 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./HoloComp/scene.gltf");
+  const computer = useGLTF("./nepal/scene.gltf");
 
   useEffect(() => {
     const model = computer.scene;
@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black'  />
+      <hemisphereLight intensity={0.55}   />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -39,12 +39,12 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
         
       />
-      <pointLight intensity={1}/>
+      <pointLight intensity={5}/>
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 1.75}
-        position={isMobile ? [0, -3, -2.2] : [2, -3.25, -0.001]}
-        rotation={[0.0, 0.9, 0]}
+        position={isMobile ? [0, -3, -2.2] : [1, -1.25, -1.5]}
+        rotation={[0.0, -11, 0]}
       />
     </mesh>
   );
@@ -55,7 +55,7 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const loader = new GLTFLoader();
-    loader.load('./HoloComp/scene.gltf', (computer) => {
+    loader.load('./nepal/scene.gltf', (computer) => {
       const model = computer.scene;
       const animations = computer.animations;
 

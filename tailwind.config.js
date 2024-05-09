@@ -20,7 +20,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/testing.jpg')",
+        "hero-pattern": "url('/src/assets/navy.jpg')",
       },
       animation: {
         text: 'text 5s ease infinite',
