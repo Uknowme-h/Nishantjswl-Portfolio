@@ -26,7 +26,7 @@ const Hero = () => (
       // }}
       >
         <h1 className={`${styles.heroHeadText}`}>
-          HI, I'm <span className=' animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent  font-black'>Nishant</span>
+          HI, I'm <span className=' animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent  font-black'>Nishant Jaiswal</span>
         </h1>
         <h1 className={`${styles.heroSubText} mt-1`}>
           An AI/ML Enthusiast & Web Developer from Nepal 🇳🇵

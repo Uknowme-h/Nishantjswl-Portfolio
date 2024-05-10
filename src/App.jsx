@@ -13,7 +13,10 @@ const App = ()=>{
       <About/>
       <Experience/>
       <Tech/>
-      <Works/>
+      <div className="bg-[#0c1022]">
+        <Works/>
+      </div>
+      
       <Feedbacks/>
       <div className="relative z-0">
         <Contact/>
