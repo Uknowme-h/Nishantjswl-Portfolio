@@ -23,6 +23,9 @@ import {
     jobit,
     tripguide,
     threejs,
+    Project_1,
+    Project_2,
+    Project_3,
 } from "../assets";
 
 export const navLinks = [
@@ -195,66 +198,79 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Weather App",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "This is a weather app. It includes various features such as displaying current weather information, a search bar to search for different cities, and a pop-up window to show past 7 days data. The app also provides a forecast for the next few days.",
         tags: [
             {
-                name: "react",
+                name: "HTML/CSS",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "MYSQL",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "PHP",
                 color: "pink-text-gradient",
             },
+            {
+                name: "JavaScript",
+                color: "text-[blue]",
+            }
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: Project_1,
+        source_code_link: "https://github.com/Uknowme-h/Weather-app?tab=readme-ov-file",
     },
     {
-        name: "Job IT",
+        name: "Open-World 3D Game",
         description:
             "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
         tags: [
             {
-                name: "react",
+                name: "Unity3d",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "C-Sharp",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "Git",
                 color: "pink-text-gradient",
             },
+            {
+                name: "3D-Modeling",
+                color: "text-[blue]",
+            }
         ],
-        image: jobit,
+        image: Project_2,
         source_code_link: "https://github.com/",
     },
     {
-        name: "Trip Guide",
+        name: "Corn-Leaf Disease Detection",
         description:
             "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         tags: [
             {
-                name: "nextjs",
+                name: "Python",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "Fastai",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "Pytorch",
                 color: "pink-text-gradient",
             },
+            {
+                name: "Docker",
+                color: "text-[blue]",
+
+            }
         ],
-        image: tripguide,
+        image: Project_3,
         source_code_link: "https://github.com/",
     },
 ];

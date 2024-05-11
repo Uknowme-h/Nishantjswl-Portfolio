@@ -23,17 +23,18 @@ return(
         speed:450,
       }
     }
-    className= " p-5 rounded-2xl sm:w-[360px] w-full;"
+    className= "group p-5 rounded-2xl sm:w-[360px] w-full"
     style={{
       background: "linear-gradient(145deg, #0b0e1f, #0d1124)",
       boxShadow: '20px 20px 60px #05060e,-20px -20px 60px #131a36'
       }}
     >
       <div className='relative w-full h-[230px]'>
+        
         <img
         src={image}
         alt ={name}
-        className='w-full h-full object-cover rounded-2xl'/>
+        className='w-full h-full group-hover:scale-110 transition duration-500  object-cover  object-cover rounded-2xl '/>
 
         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
           <div onClick={()=>{
@@ -90,7 +91,7 @@ const Works = () => {
       </motion.div>
       <div className='w-full flex'>
         <motion.p variants={fadeIn("","",0.1,1)}
-        className='mt-3 text-secondary text-[17px] text-[green] max-w-3xl leading-[30px]'
+        className='mt-3 text-[17px] text-[green] max-w-3xl leading-[30px]'
         >
          //Here are some of the projects I've worked on. Click on the project card to view the project details.
         </motion.p>
@@ -113,7 +114,7 @@ const Works = () => {
 
       <div className='w-full flex'>
         <motion.p variants={fadeIn("","",0.1,1)}
-        className='mt-20 text-secondary text-[17px] text-[green] max-w-3xl leading-[30px]'
+        className='mt-20  text-[17px] text-[green] max-w-3xl leading-[30px]'
         >
          // Follow me on Github to Stay Updated with my latest projects.
         </motion.p>
