@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import secrets from "../../secrets";
+// import secrets from "../../secrets";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -31,9 +31,9 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    const service_id = secrets.SERVICE_ID;
-    const template_id = secrets.TEMPLATE_ID;
-    const user_id = secrets.USER_ID;
+    const service_id = process.env.REACT_APP_SERVICE_ID;
+    const template_id = process.env.REACT_APP_TEMPLATE_ID;
+    const user_id = process.env.REACT_APP_USER_ID;
 
     emailjs
       .send(
