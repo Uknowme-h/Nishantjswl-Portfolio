@@ -1,7 +1,6 @@
 import {
     ml,
     backend,
-    creator,
     web,
     javascript,
     typescript,
@@ -15,10 +14,6 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
     threejs,
     Project_1,
     Project_2,

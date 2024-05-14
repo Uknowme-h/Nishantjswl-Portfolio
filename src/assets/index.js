@@ -1,7 +1,5 @@
 import logo from "./logo.svg";
 import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
 import web from "./webdev.png";
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -26,10 +24,7 @@ import keras from "./tech/keras.png";
 import scikitlearn from "./tech/scikitlearn.png";
 import tf from "./tech/tf.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+
 import company from "./company/company.png"
 
 import Project_1 from "./Project_1.png";
@@ -41,8 +36,6 @@ import data from "./data.png"
 export {
   logo,
   backend,
-  creator,
-  mobile,
   web,
   github,
   menu,
@@ -60,10 +53,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   Project_1,
   Project_2,
   Project_3,
