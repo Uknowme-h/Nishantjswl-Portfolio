@@ -2,6 +2,10 @@ import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
+import { OrbitControls } from "@react-three/drei";
+import { useMotionValue } from "framer-motion";
+import { useEffect } from "react";
+import { motion } from "framer-motion-3d";
 
 const Stars = (props) => {
   const ref = useRef();
@@ -12,8 +16,28 @@ const Stars = (props) => {
     ref.current.rotation.y -= delta / 15;
   });
 
+ 
+  const mouse = {
+    x:useMotionValue(0),
+    y:useMotionValue(0)
+  }
+
+  const manageMouseMove = (e)=>{
+    const {innerWidth,innerHeight} = window;
+    const {clientX,clientY} = e;
+    const x = -0.5 + (clientX/innerWidth);
+    const y = -0.5 +(clientY/innerHeight);
+    mouse.x.set(x);
+    mouse.y.set(y); 
+  
+  }
+  useEffect(()=>{
+    window.addEventListener('mousemove',manageMouseMove)
+    return ()=> window.removeEventListener('mousemove',manageMouseMove)
+  })
+
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <motion.group rotation-x={mouse.y} rotation-y={mouse.x}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
@@ -23,7 +47,7 @@ const Stars = (props) => {
           depthWrite={false}
         />
       </Points>
-    </group>
+    </motion.group>
   );
 };
 
@@ -32,11 +56,16 @@ const StarsCanvas = () => {
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
+        <OrbitControls
+          enableZoom={false}
+          enableDamping
+        />
           <Stars />
         </Suspense>
 
         <Preload all />
       </Canvas>
+      
     </div>
   );
 };

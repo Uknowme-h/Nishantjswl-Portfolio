@@ -1,5 +1,5 @@
 import {
-    mobile,
+    ml,
     backend,
     creator,
     web,
@@ -19,13 +19,16 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
     Project_1,
     Project_2,
     Project_3,
+    data,
+    company,
+    python,
+    keras,
+    tf,
+    scikitlearn,
 } from "../assets";
 
 export const navLinks = [
@@ -38,8 +41,16 @@ export const navLinks = [
         title: "Work",
     },
     {
+        id: "projects",
+        title: "Projects"
+    },
+    {
         id: "contact",
         title: "Contact",
+    },
+    {
+        id: "socials",
+        title: "Socials",
     },
 ];
 
@@ -50,7 +61,7 @@ const services = [
     },
     {
         title: "Machine Learning",
-        icon: mobile,
+        icon: ml,
     },
     {
         title: "Backend Developer",
@@ -58,27 +69,31 @@ const services = [
     },
     {
         title: "Data Analyst",
-        icon: creator,
+        icon: data,
     },
 
 ];
 
 const technologies = [
     {
-        name: "HTML 5",
-        icon: html,
-    },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
-        name: "JavaScript",
-        icon: javascript,
-    },
-    {
         name: "TypeScript",
         icon: typescript,
+    },
+    {
+        name: 'Python',
+        icon: python,
+    },
+    {
+        name: 'Keras',
+        icon: keras,
+    },
+    {
+        name: 'ScikitLearn',
+        icon: scikitlearn
+    },
+    {
+        name: 'TensorFlow',
+        icon: tf,
     },
     {
         name: "React JS",
@@ -105,10 +120,6 @@ const technologies = [
         icon: git,
     },
     {
-        name: "figma",
-        icon: figma,
-    },
-    {
         name: "docker",
         icon: docker,
     },
@@ -117,15 +128,15 @@ const technologies = [
 const experiences = [
     {
         title: "QA Analyst Intern",
-        company_name: "RB Technology",
-        icon: starbucks,
+        company_name: "RS Technology",
+        icon: company,
         iconBg: "#383E56",
         date: "March 2023 - july 2023",
         points: [
-            "Analyzing test results and identifying areas for improvement as well as potential risks.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Spearheaded quality assurance initiatives by analyzing test results, pinpointing improvement areas, and identifying potential risks.",
+            "Collaborated cross-functionally with designers, product managers, and developers to ensure high-quality product delivery.",
+            "Championed responsive design and cross-browser compatibility for optimal user experience across platforms.",
+            "Contributed to code quality by participating in code reviews and providing constructive feedback to developers.",
         ],
     },
     // {
@@ -225,7 +236,7 @@ const projects = [
     {
         name: "Open-World 3D Game",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Gear up and race across the open world!.This Unity 3D project lets you drive a single, customizable car through missions in a vast, explorable world. Blast the radio, conquer challenges, and climb the scoreboards!",
         tags: [
             {
                 name: "Unity3d",
@@ -245,12 +256,12 @@ const projects = [
             }
         ],
         image: Project_2,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/Uknowme-h/Operation-GearHead",
     },
     {
         name: "Corn-Leaf Disease Detection",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "A CNN Model trained on a Corn-leaf datasets using a pretrained Model (Resnet50) with a accuracy of over 90%, Deployed this model on Heroku using FastAPI and Docker",
         tags: [
             {
                 name: "Python",
@@ -271,7 +282,7 @@ const projects = [
             }
         ],
         image: Project_3,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/Uknowme-h/Corn_disease_detection",
     },
 ];
 
