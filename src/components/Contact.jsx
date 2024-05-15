@@ -44,7 +44,7 @@ const Contact = () => {
           to_name: "Nishant Jswl",
           from_email: form.email,
           to_email: "nishantjais541@gmail.com",
-          message: form.message,
+          message: form.message + "\n from \n" + form.email,
         },
         "_uIpx_LXmaolnOHLa"
       )
@@ -97,6 +97,7 @@ const Contact = () => {
                 background: "#010038",
                 boxShadow: "5px 5px 10px #000016,-5px -5px 10px #02005a",
               }}
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -112,6 +113,7 @@ const Contact = () => {
                 background: "#010038",
                 boxShadow: "5px 5px 10px #000016,-5px -5px 10px #02005a",
               }}
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -127,6 +129,7 @@ const Contact = () => {
                 background: "#010038",
                 boxShadow: "5px 5px 10px #000016,-5px -5px 10px #02005a",
               }}
+              required
             />
           </label>
 
