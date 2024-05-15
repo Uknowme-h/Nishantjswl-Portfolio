@@ -49,21 +49,26 @@ const About = () => {
         <h2 className={styles.sectionHeadText}> Overview</h2>
       </motion.div>
 
-      <a
+      <motion.a
+        variants={textVariant()}
         href="https://drive.google.com/file/d/1MCqB04C8A-TdKFKKtUfXRNd4wBdjwqHp/view?usp=sharing"
         target="_blank"
-        className="absolute right-[100px] top-[100px] text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+        className="absolute sm:right-[100px] right-[50px] top-[100px] text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 "
         style={{
           background: "linear-gradient(145deg, #01003c, #010032)",
           boxShadow: "5px 5px 10px #01001f,-5px -5px 10px #010051",
+          fontSize: "14px", // Added font size for small devices
         }}
       >
         <FontAwesomeIcon icon={faDownload} /> Download CV
-      </a>
+      </motion.a>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        style={{
+          fontSize: "14px", // Added font size for small devices
+        }}
       >
         I'm a passionate web developer diving headfirst into the world of AI/ML.
         My experience spans across JavaScript, TypeScript, React, and Three.js

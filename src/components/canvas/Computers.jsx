@@ -1,11 +1,11 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Canvas ,useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import CanvasLoader from "../Loader";
-import { AnimationMixer } from 'three';
+import { AnimationMixer } from "three";
 
-let mixer = true; 
+let mixer = true;
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./nepal/scene.gltf");
 
@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.55}   />
+      <hemisphereLight intensity={0.55} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -37,13 +37,12 @@ const Computers = ({ isMobile }) => {
         intensity={1}
         castShadow
         shadow-mapSize={1024}
-        
       />
-      <pointLight intensity={5}/>
+      <pointLight intensity={5} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1 : 1.75}
-        position={isMobile ? [-3, -1, -2.2] : [1, -1.25, -1.5]}
+        scale={isMobile ? 2 : 3.75}
+        position={isMobile ? [-3, -1, -2.2] : [1, -0.25, -1.5]}
         rotation={[0.0, -11, 0]}
       />
     </mesh>
@@ -55,7 +54,7 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const loader = new GLTFLoader();
-    loader.load('./nepal/scene.gltf', (computer) => {
+    loader.load("./nepal/scene.gltf", (computer) => {
       const model = computer.scene;
       const animations = computer.animations;
 
@@ -68,22 +67,17 @@ const ComputersCanvas = () => {
     });
     const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    
     setIsMobile(mediaQuery.matches);
-    
-    
+
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
-    
   }, []);
 
   return (
