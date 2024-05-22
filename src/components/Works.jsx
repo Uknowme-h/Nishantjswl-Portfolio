@@ -18,9 +18,9 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="group p-5 rounded-2xl sm:w-[360px] w-full"
+      <div
+        // options={{ max: 45, scale: 1, speed: 450 }}
+        className="group p-5 rounded-2xl sm:w-[360px] w-full hover:scale-110 transition duration-500"
         style={{
           background: "linear-gradient(145deg, #0b0e1f, #0d1124)",
           boxShadow: "20px 20px 60px #05060e,-20px -20px 60px #131a36",
@@ -30,7 +30,7 @@ const ProjectCard = ({
           <img
             src={image}
             alt={name}
-            className="w-full h-full group-hover:scale-110 transition duration-500  object-cover  object-cover rounded-2xl "
+            className="w-full h-full transition duration-500  object-cover  object-cover rounded-2xl "
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
@@ -45,7 +45,7 @@ const ProjectCard = ({
                 src={github}
                 alt="github"
                 className="w-1/2 h-1/2 
-              object-contain animate-pulse"
+              object-contain"
               />
             </div>
           </div>
@@ -65,7 +65,7 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

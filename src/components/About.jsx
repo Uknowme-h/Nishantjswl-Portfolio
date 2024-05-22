@@ -48,12 +48,10 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction </p>
         <h2 className={styles.sectionHeadText}> Overview</h2>
       </motion.div>
-
-      <motion.a
-        variants={textVariant()}
+      <a
         href="https://drive.google.com/file/d/1MCqB04C8A-TdKFKKtUfXRNd4wBdjwqHp/view?usp=sharing"
         target="_blank"
-        className="absolute sm:right-[100px] right-[50px] top-[100px] text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 "
+        className="absolute sm:right-[100px] right-[50px] top-[100px] text-white p-2 rounded-lg transition duration-300 ease-in-out hover:scale-105 "
         style={{
           background: "linear-gradient(145deg, #01003c, #010032)",
           boxShadow: "5px 5px 10px #01001f,-5px -5px 10px #010051",
@@ -61,8 +59,7 @@ const About = () => {
         }}
       >
         <FontAwesomeIcon icon={faDownload} /> Download CV
-      </motion.a>
-
+      </a>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"

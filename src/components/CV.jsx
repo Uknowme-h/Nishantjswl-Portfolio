@@ -1,10 +1,15 @@
 import React from "react";
 import { SectionWrapper } from "../hoc";
+import { motion } from "framer-motion";
 import "./cv.css";
+import { fadeIn, textVariant } from "../utils/motion";
 const CV = () => {
   return (
-    <div className="h-[350px] text-center flex justify-center">
-      <div className=" card mt-[5%] ">
+    <div className="h-[500px] text-center flex justify-center">
+      <motion.div
+        variants={fadeIn("", "", 0.1, 1)}
+        className=" card mt-[5%] top-[20%]"
+      >
         <div className="background"></div>
         <div className="logo">My Socials</div>
 
@@ -64,7 +69,7 @@ const CV = () => {
         </a>
 
         <div className="box box4"></div>
-      </div>
+      </motion.div>
     </div>
   );
 };
