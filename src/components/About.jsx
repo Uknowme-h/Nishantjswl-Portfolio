@@ -73,7 +73,7 @@ const About = () => {
         scikit-learn and FastAPI fuels my exploration of machine learning. I'm
         constantly expanding my knowledge in both fields, eager to create
         innovative solutions at the intersection of web development and
-        artificial intelligence.
+        artificial intelligence.Im open to new opportunities and challenges.
       </motion.p>
 
       <motion.div>
